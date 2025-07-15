@@ -1,8 +1,13 @@
+import { ThemeMode } from "@/utils/types";
 import { createContext } from "react";
 
-const ThemeContext = createContext({
-  theme: "light",
-  toggle: () => {},
-});
+
+interface IThemeContext {
+  theme: ThemeMode;
+  toggle: () => void;
+}
+
+const ThemeContext = createContext<IThemeContext | undefined>(undefined);
+
 
 export default ThemeContext;

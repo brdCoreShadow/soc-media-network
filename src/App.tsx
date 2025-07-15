@@ -1,24 +1,22 @@
 import * as SC from "./AppStyled";
 
-import { useContext } from "react";
-import ThemeContext from "./contest/styles/themeContext";
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import lightTheme from "./styles/lightTheme";
 import darkTheme from "./styles/darkTheme";
+import { useThemeContext } from "./contest/styles/useThemeContext";
 
 export const App: React.FC = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useThemeContext();
 
   const commonTheme = theme === "light" ? lightTheme : darkTheme;
 
-console.log(theme);
-
+  console.log(theme);
 
   return (
-    <ThemeProvider theme={commonTheme}>
+    <EmotionThemeProvider theme={commonTheme}>
       <SC.AppCon>
       </SC.AppCon>
-    </ThemeProvider>
+    </EmotionThemeProvider>
   );
 };
 
