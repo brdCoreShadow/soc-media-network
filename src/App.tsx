@@ -7,6 +7,8 @@ import { useThemeContext } from "./contest/styles/useThemeContext";
 import Header from "./layouts/Header/Header";
 import Dashboard from "./components/Dashboard/Dashboard";
 import ThemeConsole from "./components/ThemeConsole/ThemeConsole";
+import SharedLayout from "./layouts/SharedLayout/SharedLayout";
+import Followers from "./components/Followers/Followers";
 
 export const App: React.FC = () => {
   const { theme } = useThemeContext();
@@ -17,9 +19,12 @@ export const App: React.FC = () => {
     <EmotionThemeProvider theme={commonTheme}>
       <SC.AppCon>
         <Header>
-          <Dashboard/>
-          <ThemeConsole/>
+          <Dashboard />
+          <ThemeConsole />
         </Header>
+        <SharedLayout>
+          <Followers />
+        </SharedLayout>
       </SC.AppCon>
     </EmotionThemeProvider>
   );
