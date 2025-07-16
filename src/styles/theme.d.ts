@@ -20,6 +20,7 @@ declare module "@emotion/react" {
       title: string;
       content: string;
       bgItem: string;
+      themeBtn:string;
     };
   }
 }

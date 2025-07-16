@@ -17,6 +17,7 @@ const lightTheme = {
     title:"#1D1F29",
     content:"#63687D",
     bgItem:"#F1F3FA",
+    themeBtn:"#AEB3CB"
   }
 };
 

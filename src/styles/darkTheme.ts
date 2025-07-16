@@ -16,7 +16,8 @@ const darkTheme = {
     bgBody: "#1D1F29",
     title: "#FFFFFF",
     content: "#8C98C6",
-    bgItem:"#252B42",
+    bgItem: "#252B42",
+    themeBtn: "linear-gradient(to bottom, #40DB82, #388FE7)",
   },
 };
 
