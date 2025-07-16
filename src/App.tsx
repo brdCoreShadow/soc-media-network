@@ -4,17 +4,20 @@ import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import lightTheme from "./styles/lightTheme";
 import darkTheme from "./styles/darkTheme";
 import { useThemeContext } from "./contest/styles/useThemeContext";
+import Header from "./layouts/Header/Header";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 export const App: React.FC = () => {
   const { theme } = useThemeContext();
 
   const commonTheme = theme === "light" ? lightTheme : darkTheme;
 
-  console.log(theme);
-
   return (
     <EmotionThemeProvider theme={commonTheme}>
       <SC.AppCon>
+        <Header>
+          <Dashboard/>
+        </Header>
       </SC.AppCon>
     </EmotionThemeProvider>
   );
