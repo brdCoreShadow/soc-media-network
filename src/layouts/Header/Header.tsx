@@ -1,8 +1,8 @@
 import * as SC from "./HeaderStyled"
 
-import { TChildProps } from "@/utils/types";
+import { IChildProps } from "@/utils/types";
 
-const Header:React.FC<TChildProps> = ({children}) => {
+const Header:React.FC<IChildProps> = ({children}) => {
     return ( 
         <SC.HeaderCon>
             {children}

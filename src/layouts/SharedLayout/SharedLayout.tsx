@@ -1,8 +1,8 @@
 import * as SC from "./SharedLayoutStyled"
 
-import { TChildProps } from "@/utils/types";
+import { IChildProps } from "@/utils/types";
 
-const SharedLayout: React.FC<TChildProps> = ({ children }) => {
+const SharedLayout: React.FC<IChildProps> = ({ children }) => {
   return <SC.SharedLayoutCon>{children}</SC.SharedLayoutCon>;
 };
 

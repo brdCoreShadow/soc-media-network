@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ThemeContext from "./themeContext";
-import { TChildProps, ThemeMode } from "@/utils/types";
+import { IChildProps, ThemeMode } from "@/utils/types";
 
 
-const ThemeContextProvider: React.FC<TChildProps> = ({ children }) => {
+const ThemeContextProvider: React.FC<IChildProps> = ({ children }) => {
   const [theme, setTheme] = useState<ThemeMode>("light");
 
   useEffect(() => {

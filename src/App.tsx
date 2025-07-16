@@ -9,6 +9,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import ThemeConsole from "./components/ThemeConsole/ThemeConsole";
 import SharedLayout from "./layouts/SharedLayout/SharedLayout";
 import Followers from "./components/Followers/Followers";
+import Overview from "./components/Overview/Overview";
 
 export const App: React.FC = () => {
   const { theme } = useThemeContext();
@@ -24,6 +25,7 @@ export const App: React.FC = () => {
         </Header>
         <SharedLayout>
           <Followers />
+          <Overview/>
         </SharedLayout>
       </SC.AppCon>
     </EmotionThemeProvider>
