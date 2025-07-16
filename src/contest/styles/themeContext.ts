@@ -1,8 +1,9 @@
+import { IThemeContext } from "@/utils/types";
 import { createContext } from "react";
 
-const ThemeContext = createContext({
-  theme: "light",
-  toggle: () => {},
-});
+
+
+const ThemeContext = createContext<IThemeContext | undefined>(undefined);
+
 
 export default ThemeContext;

@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import ThemeContext from "./themeContext";
-import { TChildProps } from "@/utils/types";
+import { IChildProps, ThemeMode } from "@/utils/types";
 
-const ThemeContextProvider:React.FC<TChildProps> = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+
+const ThemeContextProvider: React.FC<IChildProps> = ({ children }) => {
+  const [theme, setTheme] = useState<ThemeMode>("light");
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
+    if (storedTheme === "light" || storedTheme === "dark") {
       setTheme(storedTheme);
     }
   }, []);
 
   const toggle = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme: ThemeMode = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };
