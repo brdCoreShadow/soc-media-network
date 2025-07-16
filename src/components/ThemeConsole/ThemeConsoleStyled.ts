@@ -1,3 +1,4 @@
+import { ThemeMode } from "@/utils/types";
 import styled from "@emotion/styled";
 
 export const ThemeConsoleCon = styled.div`
@@ -15,7 +16,7 @@ export const ThemeConsoleCon = styled.div`
   }
 `;
 
-export const ThemeBtn = styled.button`
+export const ThemeBtn = styled.button<{ $mode: ThemeMode }>`
   width: 48px;
   height: 24px;
 
@@ -35,5 +36,7 @@ export const ThemeBtn = styled.button`
     background-color: ${({ theme }) => theme.colors.bgItem};
 
     border-radius: 50%;
+
+    transform: ${({$mode}) => $mode==="light" && "translate(115%, 0)"}
   }
 `;
