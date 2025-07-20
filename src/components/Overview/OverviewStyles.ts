@@ -2,7 +2,22 @@ import { getColorByDifference, getIconByPlatform } from "@/utils/services";
 import { IStyleProps } from "@/utils/types";
 import styled from "@emotion/styled";
 
-export const OverviewList = styled.ul``;
+
+export const OverviewTitle = styled.h2`
+margin-bottom: 28px;
+
+font-size:24px;
+color: ${({theme}) => theme.colors.content};
+`
+
+export const OverviewList = styled.ul`
+  @media (min-width: 1280px) {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+`;
 
 export const OverviewItem = styled.li<Pick<IStyleProps, "platform">>`
   padding-top: 28px;

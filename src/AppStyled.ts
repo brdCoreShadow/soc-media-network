@@ -7,5 +7,8 @@ export const AppCon = styled.div`
 
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
+
+    margin-left: auto;
+    margin-right: auto;
   }
 `;

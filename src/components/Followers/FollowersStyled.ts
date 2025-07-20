@@ -4,6 +4,17 @@ import styled from "@emotion/styled";
 
 export const FollowersList = styled.ul`
   margin-bottom: 46px;
+
+  @media (min-width: 1280px){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    transform: translate(0, -108px);
+
+    margin-bottom: 0;
+  }
 `;
 
 export const FollowersItem = styled.li<Pick<IStyleProps, "platform">>`
@@ -15,6 +26,11 @@ export const FollowersItem = styled.li<Pick<IStyleProps, "platform">>`
   border-radius: 6px;
 
   border-top: 2px solid ${({ platform }) => getColorByPlatform(platform)};
+
+  @media (min-width: 1280px){
+    padding-left: 64px;
+    padding-right: 64px;
+  }
   & > h3 {
     margin-bottom: 8px;
     font-size: 56px;
@@ -33,6 +49,11 @@ export const FollowersItem = styled.li<Pick<IStyleProps, "platform">>`
 
   &:not(:last-of-type) {
     margin-bottom: 8px;
+
+    @media (min-width: 1280px){
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
   }
 `;
 
