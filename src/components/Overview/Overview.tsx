@@ -2,7 +2,9 @@ import * as SC from "./OverviewStyles"
 
 const Overview:React.FC = () => {
   return (
-    <ul>
+    <div>
+        <SC.OverviewTitle>Overview Today</SC.OverviewTitle>
+    <SC.OverviewList>
       <SC.OverviewItem platform="fb">
         <p>Page Views</p>
         <SC.OverviewItemFlexCon difference="up">
@@ -59,7 +61,8 @@ const Overview:React.FC = () => {
             <p>12 %</p>
         </SC.OverviewItemFlexCon>
       </SC.OverviewItem>
-    </ul>
+    </SC.OverviewList>
+    </div>
   );
 };
 

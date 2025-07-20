@@ -9,10 +9,14 @@ export const ThemeConsoleCon = styled.div`
 
   padding-top: 16px;
 
-  & > h3{
+  & > h3 {
     font-size: 14px;
 
-    color: ${({theme}) => theme.colors.content};
+    color: ${({ theme }) => theme.colors.content};
+
+    @media (min-width: 1280px) {
+      margin-right: 12px;
+    }
   }
 `;
 
@@ -29,6 +33,8 @@ export const ThemeBtn = styled.button<{ $mode: ThemeMode }>`
 
   border-radius: 12px;
 
+  cursor: pointer;
+
   & > div {
     width: 18px;
     height: 18px;
@@ -37,6 +43,6 @@ export const ThemeBtn = styled.button<{ $mode: ThemeMode }>`
 
     border-radius: 50%;
 
-    transform: ${({$mode}) => $mode==="light" && "translate(115%, 0)"}
+    transform: ${({ $mode }) => $mode === "light" && "translate(115%, 0)"};
   }
 `;
